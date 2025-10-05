@@ -21,3 +21,8 @@ Then, download and install the Portainer Server container:
 
     docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:lts
 
+Accessing Portainer server
+    https://localhost:9443/#!/3/docker/images
+
+Add Swagger dependency ang re-run the app
+    http://localhost:8081/swagger-ui/index.html
