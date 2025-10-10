@@ -10,7 +10,7 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: postgres
     ports:
-      - "15432:5432"
+      - "5432:5432"
     volumes:
       # Named volume ensures data is persisted across container restarts/rebuilds
       - pgdata:/var/lib/postgresql/data
