@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("api/products")
 class ProductController {
 
-
     private final ProductService productService;
 
     ProductController(ProductService productService) {
