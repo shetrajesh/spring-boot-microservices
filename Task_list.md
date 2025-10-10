@@ -16,6 +16,7 @@
 5) Create docker-compose file for PostgresSQL
 6) Add GitHub Action workflow
 
-
+7) Install Task to simplify day today task for build, spoltless, etc with our own task commands
+   https://taskfile.dev/docs/installation
 
 

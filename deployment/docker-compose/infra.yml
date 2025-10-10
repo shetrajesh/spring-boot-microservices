@@ -11,6 +11,9 @@ services:
       POSTGRES_DB: postgres
     ports:
       - "15432:5432"
+    volumes:
+      # Named volume ensures data is persisted across container restarts/rebuilds
+      - pgdata:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 10s
@@ -23,3 +26,7 @@ services:
           cpus: "0.5"
           memory: 512M
 
+volumes:
+  # This named volume is managed by Docker and persists data
+  pgdata:
+    name: catalog_pgdata

@@ -23,6 +23,11 @@ Then, download and install the Portainer Server container:
 
 Accessing Portainer server
     https://localhost:9443/#!/3/docker/images
+    Username : admin        Password : Messi_4252901
+
 
 Add Swagger dependency ang re-run the app
     http://localhost:8081/swagger-ui/index.html
+
+Create a docker image file for the catalog-service
+    ./mvnw -pl catalog-service spring-boot:build-image -DskipTest

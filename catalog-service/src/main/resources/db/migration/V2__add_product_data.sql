@@ -1,0 +1,22 @@
+-- Sample data for product_id_seq table
+INSERT INTO products (code, name, description, image_url, price) VALUES
+('PROD001', 'Wireless Bluetooth Headphones', 'High-quality wireless headphones with noise cancellation', '/images/headphones.jpg', 129.99),
+('PROD002', 'Smartphone X', 'Latest smartphone with advanced camera and processor', '/images/smartphone-x.jpg', 899.99),
+('PROD003', 'Laptop Pro', 'Professional laptop for work and gaming', '/images/laptop-pro.jpg', 1299.99),
+('PROD004', 'Coffee Maker Deluxe', 'Automatic coffee maker with built-in grinder', '/images/coffee-maker.jpg', 199.99),
+('PROD005', 'Fitness Tracker', 'Waterproof activity tracker with heart rate monitor', '/images/fitness-tracker.jpg', 79.99),
+('PROD006', 'Desk Lamp LED', 'Adjustable LED desk lamp with multiple brightness levels', '/images/desk-lamp.jpg', 49.99),
+('PROD007', 'Backpack Urban', 'Durable backpack with laptop compartment', '/images/backpack.jpg', 59.99),
+('PROD008', 'Wireless Mouse', 'Ergonomic wireless mouse with long battery life', '/images/wireless-mouse.jpg', 29.99),
+('PROD009', 'Stainless Steel Water Bottle', 'Insulated water bottle keeps drinks cold for 24 hours', '/images/water-bottle.jpg', 24.99),
+('PROD010', 'Bluetooth Speaker', 'Portable Bluetooth speaker with rich sound quality', '/images/bluetooth-speaker.jpg', 89.99),
+('PROD011', 'Mechanical Keyboard', 'RGB mechanical keyboard with customizable keys', '/images/keyboard.jpg', 119.99),
+('PROD012', 'Monitor 27"', '27-inch 4K monitor for professional use', '/images/monitor.jpg', 349.99),
+('PROD013', 'Gaming Chair', 'Ergonomic gaming chair with lumbar support', '/images/gaming-chair.jpg', 299.99),
+('PROD014', 'External Hard Drive', '2TB portable external hard drive', '/images/hard-drive.jpg', 89.99),
+('PROD015', 'Tablet Mini', 'Compact tablet perfect for reading and browsing', '/images/tablet.jpg', 399.99),
+('PROD016', 'Smart Watch', 'Smartwatch with fitness tracking and notifications', '/images/smart-watch.jpg', 199.99),
+('PROD017', 'Wireless Earbuds', 'True wireless earbuds with charging case', '/images/earbuds.jpg', 149.99),
+('PROD018', 'Desk Organizer', 'Multi-compartment desk organizer set', '/images/desk-organizer.jpg', 34.99),
+('PROD019', 'USB-C Hub', '7-in-1 USB-C hub with multiple ports', '/images/usb-hub.jpg', 45.99),
+('PROD020', 'Reading Light', 'Clip-on reading light with adjustable neck', '/images/reading-light.jpg', 19.99);
