@@ -22,12 +22,26 @@
     <modules>
         <module>catalog-service</module>
     </modules>
+
     <build>
         <plugins>
             <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.1.4</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>com.diffplug.spotless</groupId>
                 <artifactId>spotless-maven-plugin</artifactId>
-<!--                <version>2.43.0</version> &lt;!&ndash; Use the latest stable version &ndash;&gt;-->
+                <version>2.43.0</version>
                 <configuration>
                     <java>
                         <importOrder/>
@@ -49,5 +63,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

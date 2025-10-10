@@ -20,7 +20,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="catalog-service" target="19" />
-      <module name="spring-boot-microservices" target="1.5" />
+      <module name="spring-boot-microservices" target="19" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
