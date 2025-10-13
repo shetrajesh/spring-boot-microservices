@@ -31,3 +31,19 @@ Add Swagger dependency ang re-run the app
 
 Create a docker image file for the catalog-service
     ./mvnw -pl catalog-service spring-boot:build-image -DskipTest
+
+
+Run the docker image file from local registry
+    docker run -p 8081:8081 -t catalog-service:0.0.1-SNAPSHOT
+
+Run the docker image file from docker hub registry
+
+    docker run -d \
+        --name catalog-service \
+        --network bookstore-net \
+        -e SPRING_PROFILES_ACTIVE=docker \
+        -e DB_URL=jdbc:postgresql://catalog-db:5432/postgres \
+        -e DB_USERNAME=postgres \
+        -e DB_PASSWORD=postgres \
+        -p 8081:8081 \
+        rshet007/bookstore-catalog-service:latest
