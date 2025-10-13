@@ -24,7 +24,6 @@ class ProductController {
 
     @GetMapping("/{pcode}")
     ResponseEntity<Product> getProductByCode(@PathVariable String pcode) {
-
         return productService
                 .getProductByCode(pcode)
                 .map(ResponseEntity::ok)

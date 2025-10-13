@@ -12,6 +12,7 @@ vars:
   DC_DIR: "deployment/docker-compose"
   INFRA_DC_FILE: "{{.DC_DIR}}/infra.yml"
   APP_DC_FILE: "{{.DC_DIR}}/apps.yml"
+  IMAGE_DC_FILE: "{{.DC_DIR}}/hubapp.yml"
 
 tasks:
   default:
@@ -32,21 +33,21 @@ tasks:
     cmds:
       - "{{.MVNW}} -pl catalog-service spring-boot:build-image -DskipTests"
 
-  start:
+  start_local_app:
     deps: [ build ]
     cmds:
       - "docker compose -f {{.INFRA_DC_FILE}} -f {{.APP_DC_FILE}} up -d"
 
-  stop:
+  stop_local_app:
     cmds:
       - "docker compose -f {{.INFRA_DC_FILE}} -f {{.APP_DC_FILE}} stop"
       - "docker compose -f {{.INFRA_DC_FILE}} -f {{.APP_DC_FILE}} rm -f"
 
-  restart:
+  restart_local_app:
     cmds:
-      - task: stop
+      - task: stop_local_app
       - task: sleep
-      - task: start
+      - task: start_local_app
 
   start_infra:
     cmds:
@@ -72,3 +73,12 @@ tasks:
   runapp:
     cmds:
       - "{{.MVNW}} spring-boot:run"
+
+  start_app_using_image:
+    cmds:
+      - "docker compose -f {{.INFRA_DC_FILE}} -f {{.IMAGE_DC_FILE}} up -d"
+
+  stop_local_app:
+    cmds:
+      - "docker compose -f {{.INFRA_DC_FILE}} -f {{.IMAGE_DC_FILE}} stop"
+      - "docker compose -f {{.INFRA_DC_FILE}} -f {{.IMAGE_DC_FILE}} rm -f"
